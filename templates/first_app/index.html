@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<div>
     <h1>first app in html file</h1>
     <h2>{{ insert_me }}</h2>
+    <h2>{{ insert_me2 }}</h2>
+    <img src="{% static 'images/test.jpg' %}">
+</div>
 </body>
 </html>
