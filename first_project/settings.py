@@ -121,5 +121,5 @@ USE_TZ = True
 STATIC_URL = '/thisisshownurl/'  # this url will be mapped to below variables ( Edited by developer)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "hamid")
+    os.path.join(BASE_DIR, "assets")
 ]
