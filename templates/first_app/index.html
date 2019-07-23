@@ -12,7 +12,7 @@
     {% if objects %}
         <ul>
             {% for object in objects %}
-                <li>{{ object.name }}</li>
+                <li>{{ object.name }} - {{ object.date }} </li>
             {% endfor %}
         </ul>
     {% endif %}
