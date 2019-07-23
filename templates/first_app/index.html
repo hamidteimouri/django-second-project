@@ -7,10 +7,15 @@
 </head>
 <body>
 <div>
-    <h1>first app in html file</h1>
-    <h2>{{ insert_me }}</h2>
-    <h2>{{ insert_me2 }}</h2>
-    <img src="{% static 'images/test.jpg' %}">
+    <h1>All access records</h1>
+
+    {% if objects %}
+        <ul>
+            {% for object in objects %}
+                <li>{{ object.name }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 </body>
 </html>

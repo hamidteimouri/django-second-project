@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from first_app.models import AccessRecord
 from django.http import HttpResponse
 
 
@@ -8,5 +8,6 @@ from django.http import HttpResponse
 
 def index(request):
     # return HttpResponse('Hello world !')
-    my_dict = {'insert_me': 'hello I am from views.py', 'insert_me2': 'hello I am from views.py2'}
-    return render(request, "first_app/index.html", context=my_dict)
+    access_records = AccessRecord.objects.order_by('date')
+    data = {'objects': access_records}
+    return render(request, "first_app/index.html", context=data)
